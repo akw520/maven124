@@ -22,7 +22,7 @@ pipeline
                 git 'https://github.com/selenium-saikrishna/maven.git'
             }
         }
-            stage('ContinuousBuild')
+            stage('ContinuousMaster')
         {
             steps
             {
@@ -40,7 +40,7 @@ pipeline
                 sh 'mvn package'
             }
         }
-            stage('ContinuousDeployment')
+            stage('ContinuousDeployment_Master')
         {
             steps
             {
@@ -58,7 +58,7 @@ pipeline
                 }
             }
         }
-        stage('ContinuousTesting')
+        stage('ContinuousTesting_Master')
         {
             steps
             {
